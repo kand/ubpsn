@@ -3,6 +3,7 @@
 
 # config secrets
 .shell_config
+.notes
 
 # site stuff
 dist
