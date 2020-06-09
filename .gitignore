@@ -1,0 +1,14 @@
+# mac crap
+.DS_Store
+
+# config secrets
+.shell_config
+
+# site stuff
+dist
+
+# node js
+node_modules/
+
+# vim things
+*.swp

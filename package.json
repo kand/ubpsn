@@ -1,0 +1,21 @@
+{
+  "name": "ubpsn",
+  "version": "1.0.0",
+  "description": "Uptown/Buena Park Solidarity Network website.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "source .shell_config && npm run build && rsync -avz ./dist/* $WEBSITE_SSH:/home/public",
+    "ssh": "source .shell_config && ssh $WEBSITE_SSH"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kand/ubpsn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kand/ubpsn/issues"
+  },
+  "homepage": "https://github.com/kand/ubpsn#readme",
+  "private": true
+}
