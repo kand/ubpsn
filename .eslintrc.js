@@ -5,7 +5,8 @@ module.exports = {
     },
     'extends': [
         'eslint:recommended',
-        'plugin:react/recommended'
+        'plugin:react/recommended',
+        'plugin:flowtype/recommended',
     ],
     'parserOptions': {
         'ecmaFeatures': {
@@ -15,7 +16,8 @@ module.exports = {
         'sourceType': 'module'
     },
     'plugins': [
-        'react'
+        'flowtype',
+        'react',
     ],
     'settings': {
         'react': {
@@ -39,6 +41,7 @@ module.exports = {
         'semi': [
             'error',
             'always'
-        ]
+        ],
+        'react/prop-types': 0,
     }
 };
