@@ -8,5 +8,24 @@ export const colors = {
 };
 
 export const breakpoints = {
-    50: '@media (max-width: 400px)',
+    50: '@media (min-width: 400px)',
+    100: '@media (min-width: 800px)',
+};
+
+// TODO probably can do this in actual typography.js or specific components
+export const typography = {
+    header_1: `
+        font-size: 20px;
+        line-height: 24px;
+
+        ${breakpoints[50]} {
+            font-size: 30px;
+            line-height: 36px;
+        }
+
+        ${breakpoints[100]} {
+            font-size: 36px;
+            line-height: 48px;
+        }
+    `,
 };
