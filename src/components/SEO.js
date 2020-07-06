@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
-// $FlowIssue [cannot-resolve-module] - Flow can't find ico file?
+// $FlowFixMe[cannot-resolve-module] - Flow can't find ico file?
 import faviconIco from '../img/favicon_1.ico';
 import faviconPng from '../img/favicon_2.png';
 
