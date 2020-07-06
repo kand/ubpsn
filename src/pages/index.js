@@ -4,6 +4,7 @@ import React, {Fragment} from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 
 import {breakpoints, colors} from '../utils/styleConstants';
+import {lang} from '../utils/langConstants';
 import Divider from '../components/Divider';
 import SEO from '../components/SEO';
 import Nav from '../components/Nav';
@@ -32,6 +33,20 @@ const NavWrapped = styled(Nav)`
     }
 `;
 
+const MainContentLayout = styled.div`
+    margin: 0 7px;
+
+    ${breakpoints[50]} {
+        margin: 0 20px;
+    }
+
+    ${breakpoints[100]} {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+`;
+
 export default function Main() {
     return (
         <Fragment>
@@ -41,6 +56,9 @@ export default function Main() {
                 <NavWrapped id='siteNav'/>
                 <Cover />
                 <Divider />
+                <MainContentLayout>
+                    <p>{lang.home.main}</p>
+                </MainContentLayout>
             </RootLayout>
         </Fragment>
     );

@@ -10,5 +10,6 @@ export const lang = {
             title: 'Uptown Buena Park Solidarity Network',
             description: 'A volunteer, grassroots group operating in Chicago\'s Uptown and Buena Park neighborhoods.',
         },
+        main: 'The Uptown & Buena Park Solidarity Network is an all-volunteer, grassroots group operating in Chicago\'s Uptown and Buena Park neighborhoods. We formed to pro-actively share resources, ideas and emotional support in response to the COVID-19 crisis.',
     },
 };
