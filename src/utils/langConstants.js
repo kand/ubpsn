@@ -1,4 +1,5 @@
 
+// TODO can this go into gatsby config so it's queryable?
 export const lang = {
     global: {
         requestSupport: 'Request Support',

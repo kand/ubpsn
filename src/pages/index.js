@@ -1,9 +1,12 @@
+// @flow
+
 import React, {Fragment} from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 
 import {breakpoints, colors} from '../utils/styleConstants';
-import Cover from '../components/Cover';
+import SEO from '../components/SEO';
 import Nav from '../components/Nav';
+import Cover from '../components/Cover';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -28,9 +31,10 @@ const NavWrapped = styled(Nav)`
     }
 `;
 
-export default function About() {
+export default function Main() {
     return (
         <Fragment>
+            <SEO />
             <GlobalStyle />
             <RootLayout id='siteRoot'>
                 <NavWrapped id='siteNav'/>

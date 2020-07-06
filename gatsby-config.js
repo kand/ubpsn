@@ -11,6 +11,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-flow',
     {
@@ -20,4 +21,13 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    // TODO this should all be translated and translatable
+    title: 'Uptown Buena Park Solidarity Network',
+    description: 'A volunteer, grassroots group operating in Chicago\'s Uptown and Buena Park neighborhoods.',
+    url: 'https://www.ubpsn.org',
+    twitterUsername: '@ubpsn',
+    faviconIco: '/static/favicon_2.ico',
+    faviconPng: '/static/favicon_2.png',
+  },
 };
