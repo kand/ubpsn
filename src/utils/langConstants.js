@@ -3,9 +3,9 @@
 export const lang = {
     global: {
         requestSupport: 'Request Support',
-        requestSupportUrl: 'google.com',
+        requestSupportUrl: 'https://bit.ly/2wcemrp',
         getInvolved: 'Get Involved',
-        getInvolvedUrl: 'yahoo.com',
+        getInvolvedUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScE5f7Sr4Sb-KtE5vorn0SZMX9UzUxvodGg2z_pV7zH2qO_DQ/viewform',
     },
     home: {
         cover: {

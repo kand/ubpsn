@@ -53,7 +53,7 @@ const CoverImage = styled(Img)`
 `;
 
 export default function Cover() {
-    const {home: {cover: {title, description}}, global: {getInvolved, getInvolvedUrl}} = lang;
+    const {home: {cover: {title, description}}, global: {requestSupport, requestSupportUrl}} = lang;
 
     return (
         <StaticQuery
@@ -74,7 +74,7 @@ export default function Cover() {
                         <CoverTitle>{title}</CoverTitle>
                         <CoverDescription>{description}</CoverDescription>
                         <div>
-                            <LinkButton href={getInvolvedUrl}>{getInvolved}</LinkButton>
+                            <LinkButton href={requestSupportUrl}>{requestSupport}</LinkButton>
                         </div>
                     </CoverLeft>
                     <CoverImage fluid={fluid} />
