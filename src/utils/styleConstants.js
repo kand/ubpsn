@@ -28,4 +28,8 @@ export const typography = {
             line-height: 48px;
         }
     `,
+    header_2: `
+        font-size: 20px;
+        line-height: 24px;
+    `,
 };

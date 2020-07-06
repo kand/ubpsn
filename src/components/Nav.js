@@ -8,8 +8,11 @@ import Img from 'gatsby-image';
 import {breakpoints} from '../utils/styleConstants';
 
 const NavImage = styled(Img)`
-
     ${breakpoints[50]} {
+        margin-left: 20px;
+    }
+
+    ${breakpoints[100]} {
         margin-left: 103px;
     }
 `;

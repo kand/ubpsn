@@ -7,6 +7,7 @@ import Img from 'gatsby-image';
 
 import {colors, breakpoints, typography} from '../utils/styleConstants';
 import {lang} from '../utils/langConstants';
+import LinkButton from '../components/LinkButton';
 
 const CoverBackground = styled.div`
     display: flex;
@@ -42,23 +43,6 @@ const CoverLeft = styled.div`
     }
 `;
 
-const CoverCTA = styled.a`
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 19px;
-
-    display: inline-block;
-    background-color: ${colors.primary};
-    color: ${colors.black};
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 10px 40px;
-
-    ${breakpoints[100]} {
-        padding: 20px 72px;
-    }
-`;
-
 const CoverImage = styled(Img)`
     margin: auto 0 0 auto;
     width: 198px;
@@ -69,7 +53,7 @@ const CoverImage = styled(Img)`
 `;
 
 export default function Cover() {
-    const {home: {cover: {title, description}}, global: {getInvolved}} = lang;
+    const {home: {cover: {title, description}}, global: {getInvolved, getInvolvedUrl}} = lang;
 
     return (
         <StaticQuery
@@ -90,7 +74,7 @@ export default function Cover() {
                         <CoverTitle>{title}</CoverTitle>
                         <CoverDescription>{description}</CoverDescription>
                         <div>
-                            <CoverCTA href='google.com'>{getInvolved}</CoverCTA>
+                            <LinkButton href={getInvolvedUrl}>{getInvolved}</LinkButton>
                         </div>
                     </CoverLeft>
                     <CoverImage fluid={fluid} />

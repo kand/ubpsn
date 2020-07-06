@@ -9,6 +9,8 @@ import Divider from '../components/Divider';
 import SEO from '../components/SEO';
 import Nav from '../components/Nav';
 import Cover from '../components/Cover';
+import InfoBox from '../components/InfoBox';
+import LinkButton from '../components/LinkButton';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -47,6 +49,15 @@ const MainContentLayout = styled.div`
     }
 `;
 
+const InfoBoxes = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    ${breakpoints[100]} {
+        flex-direction: row;
+    }
+`;
+
 export default function Main() {
     return (
         <Fragment>
@@ -58,6 +69,18 @@ export default function Main() {
                 <Divider />
                 <MainContentLayout>
                     <p>{lang.home.main}</p>
+                    <InfoBoxes>
+                        <InfoBox
+                            title={lang.home.infoBoxes.box2.title}
+                            text={lang.home.infoBoxes.box2.text}
+                            cta={<LinkButton href={lang.global.getInvolvedUrl}>{lang.global.getInvolved}</LinkButton>}
+                        />
+                        <InfoBox
+                            title={lang.home.infoBoxes.box1.title}
+                            text={lang.home.infoBoxes.box1.text}
+                            cta={<LinkButton href={lang.global.requestSupportUrl}>{lang.global.requestSupport}</LinkButton>}
+                        />
+                    </InfoBoxes>
                 </MainContentLayout>
             </RootLayout>
         </Fragment>
