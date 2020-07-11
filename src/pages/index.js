@@ -11,10 +11,12 @@ import Nav from '../components/Nav';
 import Cover from '../components/Cover';
 import InfoBox from '../components/InfoBox';
 import LinkButton from '../components/LinkButton';
+import Footer from '../components/Footer';
 
 const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${colors.background};
+        margin-bottom: 50px;
     }
 `;
 
@@ -36,15 +38,15 @@ const NavWrapped = styled(Nav)`
 `;
 
 const MainContentLayout = styled.div`
-    margin: 0 7px;
+    margin: 0 7px 100px;
 
     ${breakpoints[50]} {
-        margin: 0 20px;
+        margin: 0 20px 100px;
     }
 
     ${breakpoints[100]} {
         max-width: 880px;
-        margin: 0 auto;
+        margin: 0 auto 100px;
         padding: 0 20px;
     }
 `;
@@ -82,6 +84,7 @@ export default function Main() {
                         />
                     </InfoBoxes>
                 </MainContentLayout>
+                <Footer />
             </RootLayout>
         </Fragment>
     );
