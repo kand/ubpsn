@@ -13,3 +13,7 @@ node_modules/
 
 # vim things
 *.sw*
+
+# other stuff
+.cache/
+public/
