@@ -7,7 +7,7 @@ import facebookSvg from '../img/logo_facebook.png';
 import twitterSvg from '../img/logo_twitter.png';
 import instagramSvg from '../img/logo_instagram.png';
 import {lang} from '../utils/langConstants';
-import {colors} from '../utils/styleConstants';
+import MailchimpNewsletterSignup from './MailchimpNewsletterSignup';
 
 const FooterContainer = styled.div`
     display: flex;
@@ -17,18 +17,6 @@ const FooterContainer = styled.div`
 const SocialImage = styled.img`
     height: 36px;
     width: 36px;
-`;
-
-const NewsletterEmail = styled.input`
-    border: 2px solid ${colors.neutralBorder};
-    border-right: none;
-    padding: 7px 18px;
-`;
-
-const NewsletterButton = styled.button`
-    background-color: ${colors.primary};
-    border: 1px solid ${colors.neutralBorder};
-    padding: 8px 18px;
 `;
 
 export default function Footer() {
@@ -48,13 +36,7 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
-            <div>
-                <label>
-                    <div css='margin-bottom: 22px'>{lang.global.subscribeToNewsletter}</div>
-                    <NewsletterEmail type='email' name='email' placeholder={lang.global.email} />
-                    <NewsletterButton>{lang.global.subscribe}</NewsletterButton>
-                </label>
-            </div>
+            <MailchimpNewsletterSignup />
         </FooterContainer>
     );
 }
