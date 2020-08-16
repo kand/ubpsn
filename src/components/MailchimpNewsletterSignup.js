@@ -5,7 +5,7 @@ import React, {Fragment} from 'react';
 import {createGlobalStyle} from 'styled-components';
 
 import {lang} from '../utils/langConstants';
-import {colors} from '../utils/styleConstants';
+import {breakpoints, colors} from '../utils/styleConstants';
 
 const GlobalNewsletterStyle = createGlobalStyle`
     #mc_embed_signup {
@@ -15,17 +15,36 @@ const GlobalNewsletterStyle = createGlobalStyle`
         }
 
         #mce-EMAIL {
+            width: 100%;
+            display: block;
             border: 2px solid ${colors.neutralBorder};
-            border-right: none;
             padding: 7px 18px;
+            margin-bottom: 13px;
         }
 
         #mc-embedded-subscribe {
+            display: block;
             background-color: ${colors.primary};
             border: 1px solid ${colors.neutralBorder};
             padding: 8px 18px;
             cursor: pointer;
-            margin-left: -4px;
+        }
+    }
+
+    ${breakpoints[50]} {
+        #mc_embed_signup {
+            #mce-EMAIL {
+                width: auto;
+                border-right: none;
+                display: inline-block;
+                border-right: none;
+                margin-bottom: 0;
+            }
+
+            #mc-embedded-subscribe {
+                display: inline-block;
+                margin-left: -4px;
+            }
         }
     }
 `;

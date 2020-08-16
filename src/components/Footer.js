@@ -7,11 +7,29 @@ import facebookSvg from '../img/logo_facebook.png';
 import twitterSvg from '../img/logo_twitter.png';
 import instagramSvg from '../img/logo_instagram.png';
 import {lang} from '../utils/langConstants';
+import {breakpoints} from '../utils/styleConstants';
 import MailchimpNewsletterSignup from './MailchimpNewsletterSignup';
 
 const FooterContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+
+    ${breakpoints[75]} {
+        flex-direction: row;
+    }
+`;
+
+const SocialContainer = styled.div`
+    display: flex;
+
+    > a:not(:last-child) {
+        margin-right: 19px;
+    }
+
+    ${breakpoints[75]} {
+        justify-content: space-between;
+    }
 `;
 
 const SocialImage = styled.img`
@@ -24,7 +42,7 @@ export default function Footer() {
         <FooterContainer>
             <div>
                 <div css='margin-bottom: 22px'>{lang.footer.socialTitle}</div>
-                <div css='display: flex; justify-content: space-between;'>
+                <SocialContainer>
                     <a href='https://www.facebook.com/UBPSN/'>
                         <SocialImage alt='Facebook' src={facebookSvg} />
                     </a>
@@ -34,7 +52,7 @@ export default function Footer() {
                     <a href='https://www.instagram.com/ubpsn/'>
                         <SocialImage alt='Instagram' src={instagramSvg} />
                     </a>
-                </div>
+                </SocialContainer>
             </div>
             <MailchimpNewsletterSignup />
         </FooterContainer>

@@ -10,6 +10,7 @@ export const colors = {
 
 export const breakpoints = {
     50: '@media (min-width: 400px)',
+    75: '@media (min-width: 600px)',
     100: '@media (min-width: 800px)',
 };
 

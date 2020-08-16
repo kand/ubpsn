@@ -83,8 +83,8 @@ export default function Main() {
                             cta={<LinkButton href={lang.global.requestSupportUrl}>{lang.global.requestSupport}</LinkButton>}
                         />
                     </InfoBoxes>
+                    <Footer />
                 </MainContentLayout>
-                <Footer />
             </RootLayout>
         </Fragment>
     );
