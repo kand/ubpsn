@@ -12,7 +12,7 @@ Uptown/Buena Park Solidarity Network website.
 
 1. Generate an [ssh key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 2. Provide the generated public key to the web admin.
-3. Create a file `.shell_config` that contains a variable `WEBSITE_SSH=<user>@<host>` where `user` is your ssh username and `host` is the host of the site.
+3. Create a file `.shell_config` that contains a variable `WEBSITE_SSH=<user>@<host>` where `user` is your ssh username and `host` is the host of the site. This environment variable will be used when doing deployments and for SSH-ing into the prod server.
 
 ### Deploy
 
